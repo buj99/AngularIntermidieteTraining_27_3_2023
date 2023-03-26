@@ -1,1 +1,1 @@
-Angular Intermediate Training
+Angular Intermediate Training.
