@@ -1,11 +1,20 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlith]',
+  selector: '[appHighlight]',
   standalone: true,
 })
 export class HighlithDirective {
-  constructor(elemele: ElementRef) {
-    console.log(elemele);
+  @Input() color: string = '';
+  constructor(private element: ElementRef) {
+    console.log(element);
+  }
+
+  @HostListener('mouseenter') onMouseEnter() {
+    this.element.nativeElement.style.backgroundColor = 'yellow';
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.element.nativeElement.style.backgroundColor = '';
   }
 }
