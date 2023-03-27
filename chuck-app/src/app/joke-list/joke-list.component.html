@@ -1,1 +1,21 @@
-<p>joke-list works!</p>
+<!-- <div *ngIf="comments.length === 0">No comments</div> -->
+<!-- 
+<div *ngIf="comments.length === 0; else noCommTemplate">No comments</div> -->
+
+<!-- <ng-template #noCommTemplate>
+  <div *ngFor="let com of comments">
+    <p>{{ com }}</p>
+  </div>
+</ng-template> -->
+
+<ng-container ngSwitch="comments.length">
+  <p *ngSwitchCase="0">No comments</p>
+  <p *ngSwitchCase="1">
+    {{ comments[0] }}
+  </p>
+  <ng-container *ngSwitchDefault="">
+    <div *ngFor="let com of comments">
+      <p>{{ com }}</p>
+    </div>
+  </ng-container>
+</ng-container>

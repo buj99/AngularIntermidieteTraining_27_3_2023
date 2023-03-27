@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './joke-list.component.html',
-  styleUrls: ['./joke-list.component.scss']
+  styleUrls: ['./joke-list.component.scss'],
 })
 export class JokeListComponent {
-
+  comments: string[] = ['comm1', 'comm2', 'comm3'];
 }
