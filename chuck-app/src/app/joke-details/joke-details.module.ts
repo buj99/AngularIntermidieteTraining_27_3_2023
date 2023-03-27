@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { JokeCardComponent } from './joke-card/joke-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { SuffixPipe } from '../pipes/suffix.pipe';
+import { JokeDtailsRoutingModule } from './joke-details-routing.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { SuffixPipe } from '../pipes/suffix.pipe';
   imports: [
     CommonModule,
     MatCardModule,
-    SuffixPipe
+    SuffixPipe,
+    JokeDtailsRoutingModule
   ],
   exports: [
     JokeCardComponent

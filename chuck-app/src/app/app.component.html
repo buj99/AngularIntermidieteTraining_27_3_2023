@@ -1,4 +1,13 @@
-<app-joke-list></app-joke-list>
+<mat-toolbar>
+  <button routerLink="home">Home</button>
+  <button routerLink="list">List</button>
+  <button routerLink="details/card" (click)="navigateToDetails()">Card</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+
+<!--<app-joke-list></app-joke-list>
 
 
 <mat-card>
@@ -8,4 +17,4 @@
   <mat-card-actions>
     <button (click)="logLikesNumber()"> Display number of likes </button>
   </mat-card-actions>
-</mat-card>
+</mat-card>-->

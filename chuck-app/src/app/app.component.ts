@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { JokeCardComponent } from './joke-details/joke-card/joke-card.component';
 import { Joke } from './models/joke.model';
 
@@ -9,6 +10,10 @@ import { Joke } from './models/joke.model';
 })
 export class AppComponent implements OnInit, OnChanges, AfterViewInit {
   @ViewChild(JokeCardComponent) jokeCardComponent: JokeCardComponent | undefined;
+
+  constructor(private readonly router: Router) {
+
+  }
 
   joke = {
     title: 'Random joke',
@@ -35,5 +40,9 @@ export class AppComponent implements OnInit, OnChanges, AfterViewInit {
 
   logLikesNumber(): void {
     console.log(`Joke ${this.joke.title} has ${this.jokeCardComponent?.likeCounter} likes.`);
+  }
+
+  navigateToDetails(): void {
+    this.router.navigateByUrl('details/card');
   }
 }
