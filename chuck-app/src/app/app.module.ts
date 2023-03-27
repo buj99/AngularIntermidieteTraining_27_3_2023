@@ -5,20 +5,19 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JokeDetailsModule } from './joke-details/joke-details.module';
 import { MatCardModule } from '@angular/material/card';
-import { JokeListComponent } from "./joke-list/joke-list.component";
+import { JokeListComponent } from './joke-list/joke-list.component';
+import { HighlithDirective } from './highlith.directive';
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        JokeDetailsModule,
-        MatCardModule,
-        JokeListComponent
-    ]
+  declarations: [AppComponent],
+  providers: [],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    JokeDetailsModule,
+    MatCardModule,
+    JokeListComponent,
+  ],
 })
-export class AppModule { }
+export class AppModule {}

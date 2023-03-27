@@ -7,9 +7,13 @@
     <p>{{ com }}</p>
   </div>
 </ng-template> -->
-
+<p appHighlith>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, laborum
+  quod ullam nostrum voluptatibus quidem aliquid ipsa voluptates nesciunt alias
+  temporibus aut, error reprehenderit. Placeat enim vero natus aliquid facilis!
+</p>
 <ng-container ngSwitch="comments.length">
-  <p *ngSwitchCase="0">No comments</p>
+  <p *ngSwitchCase="0" appHighlith>No comments</p>
   <p *ngSwitchCase="1">
     {{ comments[0] }}
   </p>
