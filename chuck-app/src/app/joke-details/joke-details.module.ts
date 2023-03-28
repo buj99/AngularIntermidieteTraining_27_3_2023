@@ -17,7 +17,7 @@ import { JokeDetailsService } from './joke-details.service';
     SuffixPipe,
     JokeDtailsRoutingModule
   ],
- // providers: [JokeDetailsService],
+  providers: [JokeDetailsService],
   exports: [
     JokeCardComponent
   ]

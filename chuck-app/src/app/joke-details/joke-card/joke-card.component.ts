@@ -12,13 +12,14 @@ export class JokeCardComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() joke: Joke | undefined;
   @Output() like = new EventEmitter<void>();
 
-
-
   constructor(private readonly route: ActivatedRoute,
               private readonly jokeDetailsService: JokeDetailsService) {
     route.params.subscribe((parms) => {
       if(parms['id']) {
-        this.joke = this.jokeDetailsService.getJokeById(parms['id']);
+        //this.joke = this.jokeDetailsService.getJokeById(parms['id']);
+        this.jokeDetailsService.getJokeById4(parms['id']).subscribe((joke) => {
+          this.joke = joke;
+        });
       }
     })
 
