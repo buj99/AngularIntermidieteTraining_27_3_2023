@@ -4,6 +4,7 @@ import { JokeCardComponent } from './joke-card/joke-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { SuffixPipe } from '../pipes/suffix.pipe';
 import { JokeDtailsRoutingModule } from './joke-details-routing.module';
+import { JokeDetailsService } from './joke-details.service';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { JokeDtailsRoutingModule } from './joke-details-routing.module';
     SuffixPipe,
     JokeDtailsRoutingModule
   ],
+ // providers: [JokeDetailsService],
   exports: [
     JokeCardComponent
   ]
