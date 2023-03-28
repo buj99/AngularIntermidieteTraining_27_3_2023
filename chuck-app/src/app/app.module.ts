@@ -6,8 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LoaderComponent } from './loader/loader.component';
-import { FormsModule } from '@angular/forms';
-import { JokesFormComponent } from './jokes-form/jokes-form.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +19,7 @@ import { JokesFormComponent } from './jokes-form/jokes-form.component';
     AppRoutingModule,
     MatToolbarModule,
     LoaderComponent,
+    MatButtonModule
   ],
 })
 export class AppModule {}

@@ -5,6 +5,6 @@
     </mat-card-header>
     <mat-card-content>{{joke?.content | suffix: "." : 5}}</mat-card-content>
     <mat-card-actions>
-        <button (click)="onLikeClicked()">Like</button>
+        <button mat-raised-button color="primary" (click)="onLikeClicked()">Like</button>
     </mat-card-actions>
 </mat-card>
