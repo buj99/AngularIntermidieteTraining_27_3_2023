@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>{{joke?.title | uppercase}}</mat-card-title>
+        <mat-card-title>{{joke?.title ?? 'no joke' | uppercase}}</mat-card-title>
         <mat-card-subtitle>{{joke?.date | date : "dd-MM-YYYY"}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>{{joke?.content | suffix: "." : 5}}</mat-card-content>

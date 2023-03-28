@@ -5,17 +5,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { LoaderComponent } from "./loader/loader.component";
 
 @NgModule({
-  declarations: [AppComponent],
-  providers: [],
-  bootstrap: [AppComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    AppRoutingModule,
-    MatToolbarModule
-  ],
+    declarations: [AppComponent],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        AppRoutingModule,
+        MatToolbarModule,
+        LoaderComponent
+    ]
 })
 export class AppModule { }
