@@ -13,4 +13,16 @@ export class DataService {
   getRandomJoke(): Observable<Joke> {
     return this.http.get<Joke>(this.randomJokeUrl);
   }
+
+  getAllCategories(): Observable<string[]> {
+    return this.http.get<string[]>(
+      'https://api.chucknorris.io/jokes/categories'
+    );
+  }
+
+  getJokesByCategory(category: string): Observable<Joke[]> {
+    return this.http.get<Joke[]>(
+      `https://api.chucknorris.io/jokes/random?category=${category}`
+    );
+  }
 }
