@@ -1,0 +1,32 @@
+<form [formGroup]="newJokeForm" (ngSubmit)="onSubmit(newJokeForm)">
+  <input type="text" formControlName="joke" />
+  <div
+    *ngIf="
+      !newJokeForm.controls['joke'].valid &&
+      newJokeForm.controls['joke'].touched
+    "
+  >
+    Joke is required!
+  </div>
+  <div
+    *ngIf="
+      newJokeForm.controls['joke'].errors &&
+      newJokeForm.controls['joke'].errors['minlength']
+    "
+  >
+    Joke be at least 4 characters long.
+  </div>
+
+  <input type="text" formControlName="author" />
+  <div
+    *ngIf="
+      !newJokeForm.controls['author'].valid &&
+      newJokeForm.controls['author'].touched
+    "
+  >
+    Author is required!
+  </div>
+
+  <button type="submit" [disabled]="!newJokeForm.valid">Register</button>
+  <button type="button" (click)="newJokeForm.reset()">Reset</button>
+</form>
